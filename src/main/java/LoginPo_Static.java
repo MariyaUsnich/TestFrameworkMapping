@@ -1,7 +1,7 @@
 public class LoginPo_Static extends BasePO {
 
     public LoginPo_Static(){
-         WebDriver driver = new WebDriver();
+        // WebDriver driver = new WebDriver();
 
         System.out.println();
         System.out.println();
@@ -21,21 +21,17 @@ public class LoginPo_Static extends BasePO {
         System.out.println();
     }
 
-    public static WebElement driver(WebElement element) {
-        System.out.println("LoginPo_Static driver method with parameter: " + element.toString());
-        return element;
-    }
     private static void enterLogin(String login)
     {
         System.out.println("LoginPo_Static enterLogin method with parameter: " + login);
-        driver(login_editbox).enterText(login);
+        webDriver(login_editbox).enterText(login);
 
         System.out.println();
     }
     private static void enterPassword(String password)
     {
         System.out.println("LoginPo_Static enterPassword method with parameter: " + password);
-        driver(password_editbox).enterText(password);
+        webDriver(password_editbox).enterText(password);
 
         System.out.println();
     }
@@ -43,25 +39,24 @@ public class LoginPo_Static extends BasePO {
     private static void enterPhoneNumber(String phone_number)
     {
         System.out.println("LoginPo_Static enterPhoneNumber method with parameter: " + phone_number);
-        driver(approved_phone_number_editbox).enterText(phone_number);
+        webDriver(approved_phone_number_editbox).enterText(phone_number);
 
         System.out.println();
     }
     private static void enterCode(String code)
     {
         System.out.println("LoginPo_Static enterCode method with parameter: " + code);
-        driver(two_phase_auth_editbox).enterText(code);
+        webDriver(two_phase_auth_editbox).enterText(code);
 
         System.out.println();
     }
     private static void clickSubmitButton()
     {
         System.out.println("LoginPo_Static clickSubmitButton method");
-        driver(submit_button).click();
+        webDriver(submit_button).click();
 
         System.out.println();
     }
-
     private static WebElement login_editbox = new WebElement(); 		    // Selenium
     private static WebElement password_editbox = new WebElement(); 	    // Selenium
     private static WebElement submit_button = new WebElement(); 		    // Selenium
@@ -69,7 +64,7 @@ public class LoginPo_Static extends BasePO {
     private static WebElement approved_phone_number_editbox = new WebElement(); 	// Selenium
     private static WebElement two_phase_auth_editbox = new WebElement(); 	// Selenium
 
-    private static class WebDriver {
-    }
+   // private static class WebDriver {
+   // }
 }
 
